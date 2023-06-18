@@ -146,6 +146,7 @@ nav {
     transform: translate3d(0px, 0px, 0px) scale3d(1, 1, 1) rotateX(0deg) rotateY(0deg) rotateZ(0deg) skew(0deg, 0deg);
     transform-style: preserve-3d;
 }
+
 .nav-contact-btn a {
     text-decoration: none;
     color: var(--primary-color);
@@ -974,6 +975,30 @@ button[type="submit"]:hover {
     transform-style: preserve-3d;
 }
 
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 46px 0;
+    margin: 0 78px;
+    border-radius: 20px 20px 0 0;
+    background-image: url('./assets/bg.png');
+    text-align: center;
+}
+
+.border {
+    /* width: 30%;
+    height: 2px;
+    border: 2px solid var(--primary-color); */
+    width: 50%;
+    height: 0px;
+    left: calc(50% - 788px/2);
+    top: 10597px;
+    margin: 36px 0;
+    border: 1px solid #000000;
+}
+
 /*  */
 /*  */
 
@@ -1050,12 +1075,7 @@ button[type="submit"]:hover {
     }
 
 
-    .nav {
-        /* width: 100%;
-      padding: 0 20px; */
-        display: none;
-    }
-
+    
     .btn-container {
         margin-right: 20px;
     }
@@ -1293,6 +1313,7 @@ button[type="submit"]:hover {
         line-height: 28px;
         color: var(--primary-color);
     }
+
     .review-content h4 {
         font-family: THICCCBOI_SEMIBOLD;
         font-style: normal;
@@ -1469,7 +1490,7 @@ button[type="submit"]:hover {
         display: flex;
         justify-content: center;
         align-items: center;
-        
+
     }
 
     .contact-btn-container button {
@@ -1586,10 +1607,13 @@ button[type="submit"]:hover {
         font-size: 14px;
         line-height: 24px;
     }
+    footer {
+        margin: 0 20px;
+    }
 }
 
 /* Medium screens */
-@media screen and (min-width: 768px) and (max-width: 1023px) {
+@media screen and (min-width: 768px) and (max-width: 1026px) {
 
     header {
         height: 900px;
@@ -1651,6 +1675,9 @@ button[type="submit"]:hover {
         height: calc(100vh - 50px);
         overflow-y: auto;
     }
+
+    
+
     /* Add your specific styles for medium screens here */
 }
 

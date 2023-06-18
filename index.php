@@ -323,6 +323,11 @@
     </section>
   </main>
 
+  <footer>
+    <img src="<?php echo get_template_directory_uri(); ?>./assets/Group 29063.png" alt="">
+    <div class="border"></div>
+  <p>Understanding Document Object Model in JavaScript</p>
+</footer>
   
   <script src="<?php echo get_template_directory_uri(); ?>./script.js"></script>
   <?php wp_footer(); ?>
