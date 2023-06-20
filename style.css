@@ -1,3 +1,19 @@
+/*
+Theme Name: Tanvir Hasan Nasim
+Theme URI: https://thanvirhasan.co
+Author: the Hiramon Nahar Eva
+Author URI: https://courageous-frangollo-f43f23.netlify.app/
+Description: Twenty Twenty-One is a blank canvas for your ideas and it makes the block editor your best brush. With new block patterns, which allow you to create a beautiful layout in a matter of seconds, this theme’s soft colors and eye-catching — yet timeless — design will let your work shine. Take it for a spin! See how Twenty Twenty-One elevates your portfolio, business website, or personal blog.
+Requires at least: 5.3
+Version: 1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: one-column, accessibility-ready, custom-colors, custom-menu, custom-logo, editor-style, featured-images, footer-widgets, block-patterns, rtl-language-support, sticky-post, threaded-comments, translation-ready
+
+*/
+
+
+
 @font-face {
     font-family: hanson;
     src: url(./fonts/Hanson-Bold.ttf) format('truetype');
@@ -61,7 +77,7 @@ nav {
     justify-content: space-between;
     position: relative;
     margin: 0 auto;
-    background: rgba(237, 237, 237, 0.3);
+    background: rgba(237, 237, 237, 0.813);
     border-radius: 50px;
 
 }
@@ -117,13 +133,15 @@ nav {
     display: none;
 }
 
+.cross-icon {
+    display: none;
+}
 .btn-container {
     margin-right: 46px;
     display: flex;
     align-items: center;
 }
-
-/* ----- resume ------------ */
+/* ----- nav-contact-btn ------------ */
 
 .nav-contact-btn {
     background: none;
@@ -166,13 +184,15 @@ nav {
     font-style: normal;
     font-weight: 700;
     font-size: 78px;
-    /* margin: 0; */
     margin-top: 100px;
     line-height: 80px;
-    letter-spacing: -3.5px;
     text-align: center;
     padding-top: 90px;
     color: var(--primary-color);
+}
+
+#designicon {
+    margin-left: 10px;
 }
 
 .banner>p {
@@ -352,11 +372,12 @@ nav {
 
 .project-item>img {
     width: 100%;
+    height: fit-content;
 }
 
 .title-section {
     overflow: hidden;
-    padding: 200px 0 300px 0;
+    padding: 80px 0 190px 0;
     position: relative;
 }
 
@@ -447,7 +468,8 @@ nav {
     height: 100%;
     max-height: 450px;
     max-width: 540px;
-    min-height: 600px;
+    /* min-height: 600px; */
+    padding: 40px 0;
     grid-column-gap: 1.5rem;
     grid-row-gap: 1.5rem;
     flex-direction: column;
@@ -531,6 +553,7 @@ nav {
 
 .brands-graphics-section .tag-container .tag {
     border: 1px solid rgba(0, 0, 0, 0.3);
+    background: white;
     border-radius: 50px;
     padding: 10px 20px;
     display: inline-block;
@@ -851,7 +874,7 @@ nav {
 
 /* ------------- contact me -------------- */
 .contact-section {
-    margin: 258px;
+    margin: 150px 258px;
 }
 
 .contact-content {
@@ -931,9 +954,9 @@ select {
 .form-group select,
 .form-group textarea {
     width: 100%;
-    padding: 10px;
+    /* padding: 10px; */
     border: none;
-    background: var(--primary-color);
+    background: none;
     border-bottom: 1px solid #F5F5F5;
     color: #F5F5F5;
     outline: none;
@@ -950,9 +973,10 @@ select {
 }
 
 button[type="submit"] {
+    font-family: THICCCBOI_SEMIBOLD;
     /* display: block;
     width: 100%; */
-    padding: 10px;
+    padding: 10px 30px;
     border: none;
     background-color: #ffffff;
     border: 1px solid #000000;
@@ -1053,16 +1077,115 @@ footer {
 
 
 
+
+/* Medium screens */
+@media (max-width:900px) {
+    header {
+        height: 600px;
+    }
+
+    .nav {
+        width: 80%;
+    }
+
+    .nav>.nav-btn {
+        display: inline-block;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+    }
+
+    .nav>.nav-btn>label {
+        display: inline-block;
+        width: 50px;
+        height: 50px;
+        padding: 13px;
+        border-radius: 25px;
+        margin-right: 20px;
+        transition: all 0.3s ease-in;
+
+    }
+
+    .nav>.nav-btn>label:hover,
+    .nav #nav-check:checked~.nav-btn>label {
+        background-color: rgba(0, 0, 0, 0.24);
+    }
+
+    .nav>.nav-btn>label>span {
+        display: block;
+        width: 25px;
+        height: 10px;
+        border-top: 4px solid var(--primary-color);
+    }
+
+    .nav-links>.cross-icon {
+        position: absolute;
+        right: 60px;
+        display: block;
+        top: 60px;
+    }
+    .nav-links>#nav-check:checked~.nav-links {
+        display: none;
+    }
+    .nav-links>#nav-check:not(:checked)~.nav-links {
+        display: block;
+    }
+    .cross-icon>img {
+        width: 30px;
+    }
+
+
+    .nav>.nav-links {
+        position: absolute;
+        display: block;
+        width: 100%;
+        background: #ffffff;
+        height: 0px;
+        transition: all 0.3s ease-in;
+        overflow-y: hidden;
+        top: 0px;
+        left: 0px;
+    }
+    .btn-container {
+        padding: 20px 70px;
+    }
+    .nav_list {
+        margin-top: 60px;
+    }
+
+    .nav>.nav-links>.nav_list>a {
+        display: block;
+        width: 100%;
+        padding: 20px 70px;
+    }
+
+    .nav>#nav-check:not(:checked)~.nav-links {
+        height: 0px;
+    }
+
+    .nav>#nav-check:checked~.nav-links {
+        height: calc(100vh - 50px);
+        overflow-y: auto;
+    }
+
+
+}
+/* Large screens */
+@media screen and (min-width: 1024px) {
+    /* Add your specific styles for large screens here */
+}
+
 @media screen and (max-width: 800px) {
 
     /* body {
         
     } */
     header {
-        height: 348px;
+        height: 498px;
         padding: 30px 0;
 
     }
+  
 
     .service-btn {
         font-style: normal;
@@ -1073,18 +1196,24 @@ footer {
         /* width: 246.53px; */
         /* height: 57px; */
     }
-
+    
+  .banner>h1>img {
+        width: 30px;
+    }
 
     
     .btn-container {
         margin-right: 20px;
     }
-
+    .banner {
+        padding: 0 20px;
+    }
+    
     .banner>h1 {
         font-size: 25px;
         margin-top: 0px;
         line-height: 35px;
-        padding-top: 20px;
+        padding-top: 135px;
     }
 
     .banner>p {
@@ -1120,10 +1249,12 @@ footer {
     }
 
     .about-content>p {
+        display: block;
         font-size: 16px;
         line-height: 20px;
         width: 100%;
         text-align: center;
+        padding: 6px 80px;
     }
 
     .projects-section {
@@ -1418,7 +1549,7 @@ footer {
     }
 
     .faq-content {
-        min-height: 85vh;
+        min-height: 53vh;
         width: 96%;
         margin: 0 auto;
         display: flex;
@@ -1560,7 +1691,6 @@ footer {
         color: #F5F5F5;
         outline: none;
     }
-
     .form-group textarea {
         resize: vertical;
     }
@@ -1572,7 +1702,7 @@ footer {
     }
 
     button[type="submit"] {
-        padding: 10px;
+        padding: 10px 30px;
         border: none;
         background-color: #ffffff;
         border: 1px solid #000000;
@@ -1610,78 +1740,4 @@ footer {
     footer {
         margin: 0 20px;
     }
-}
-
-/* Medium screens */
-@media screen and (min-width: 768px) and (max-width: 1026px) {
-
-    header {
-        height: 900px;
-        width: 60%;
-    }
-
-    .nav>.nav-btn {
-        display: inline-block;
-        position: absolute;
-        right: 0px;
-        top: 5px;
-    }
-
-    .nav>.nav-btn>label {
-        display: inline-block;
-        width: 50px;
-        height: 50px;
-        padding: 13px;
-        border-radius: 25px;
-        margin-right: 20px;
-        transition: all 0.3s ease-in;
-
-    }
-
-    .nav>.nav-btn>label:hover,
-    .nav #nav-check:checked~.nav-btn>label {
-        background-color: rgba(52, 99, 188, 0.24);
-    }
-
-    .nav>.nav-btn>label>span {
-        display: block;
-        width: 25px;
-        height: 10px;
-        border-top: 2px solid #000000;
-    }
-
-    .nav>.nav-links {
-        position: absolute;
-        display: block;
-        width: 100%;
-        background-color: #cedaef;
-        height: 0px;
-        transition: all 0.3s ease-in;
-        overflow-y: hidden;
-        top: 70px;
-        left: 0px;
-    }
-
-    .nav>.nav-links>.nav_list>a {
-        display: block;
-        width: 100%;
-    }
-
-    .nav>#nav-check:not(:checked)~.nav-links {
-        height: 0px;
-    }
-
-    .nav>#nav-check:checked~.nav-links {
-        height: calc(100vh - 50px);
-        overflow-y: auto;
-    }
-
-    
-
-    /* Add your specific styles for medium screens here */
-}
-
-/* Large screens */
-@media screen and (min-width: 1024px) {
-    /* Add your specific styles for large screens here */
 }
